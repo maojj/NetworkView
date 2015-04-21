@@ -14,6 +14,7 @@
 		20362FCC1AE4FF16004D19AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20362FCB1AE4FF16004D19AE /* Images.xcassets */; };
 		20362FCF1AE4FF16004D19AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20362FCD1AE4FF16004D19AE /* LaunchScreen.xib */; };
 		20362FDB1AE4FF16004D19AE /* IBDesignableDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20362FDA1AE4FF16004D19AE /* IBDesignableDemoTests.m */; };
+		20362FED1AE51364004D19AE /* TTNetworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20362FEC1AE51364004D19AE /* TTNetworkView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		20362FD41AE4FF16004D19AE /* IBDesignableDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBDesignableDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20362FD91AE4FF16004D19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20362FDA1AE4FF16004D19AE /* IBDesignableDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBDesignableDemoTests.m; sourceTree = "<group>"; };
+		20362FEB1AE51364004D19AE /* TTNetworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTNetworkView.h; sourceTree = "<group>"; };
+		20362FEC1AE51364004D19AE /* TTNetworkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTNetworkView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				20362FC31AE4FF16004D19AE /* AppDelegate.m */,
 				20362FC51AE4FF16004D19AE /* ViewController.h */,
 				20362FC61AE4FF16004D19AE /* ViewController.m */,
+				20362FEB1AE51364004D19AE /* TTNetworkView.h */,
+				20362FEC1AE51364004D19AE /* TTNetworkView.m */,
 				20362FC81AE4FF16004D19AE /* Main.storyboard */,
 				20362FCB1AE4FF16004D19AE /* Images.xcassets */,
 				20362FCD1AE4FF16004D19AE /* LaunchScreen.xib */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20362FC71AE4FF16004D19AE /* ViewController.m in Sources */,
+				20362FED1AE51364004D19AE /* TTNetworkView.m in Sources */,
 				20362FC41AE4FF16004D19AE /* AppDelegate.m in Sources */,
 				20362FC11AE4FF16004D19AE /* main.m in Sources */,
 			);
@@ -350,6 +356,7 @@
 				INFOPLIST_FILE = IBDesignableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -360,6 +367,7 @@
 				INFOPLIST_FILE = IBDesignableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
