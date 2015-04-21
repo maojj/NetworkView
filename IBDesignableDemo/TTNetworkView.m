@@ -14,20 +14,25 @@ static NSInteger LayerCount = 4;
     NSMutableArray *shapeLayers;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self customSetup];
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self customSetup];
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [self customSetup];
+}
+
+- (void)customSetup {
+    shapeLayers = [NSMutableArray arrayWithCapacity:LayerCount];
+    for (NSInteger index = 0; index < LayerCount; index ++) {
+        CAShapeLayer *layer = [self getLayerForIndex:index];
+        [self.layer addSublayer:layer];
+        [shapeLayers addObject:layer];
+    }
 }
 
 - (void)setStrengh:(CGFloat)strengh {
@@ -45,15 +50,6 @@ static NSInteger LayerCount = 4;
 - (void)setFillColor:(UIColor *)fillColor {
     _fillColor = fillColor;
     [self setNeedsDisplay];
-}
-
-- (void)customSetup {
-    shapeLayers = [NSMutableArray arrayWithCapacity:LayerCount];
-    for (NSInteger index = 0; index < LayerCount; index ++) {
-        CAShapeLayer *layer = [self getLayerForIndex:index];
-        [self.layer addSublayer:layer];
-        [shapeLayers addObject:layer];
-    }
 }
 
 - (void)layoutSubviews {
